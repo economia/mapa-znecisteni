@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset=utf-8>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	  <script>
+	  $(document).ready(function() {
+	    $( "#slider" ).slider({
+	      value:1998,
+	      min: 1998,
+	      max: 2012,
+	      step: 1,
+	      slide: function( event, ui ) {
+	        $( "#rok" ).val( ui.value );
+	        $("#pics img").hide();
+	        $("#pic"+ui.value).show();
+	      }
+	    });
+	    $("#pics img").hide();
+	    $("#pic1998").show();
+	    $( "#rok" ).val( $( "#slider" ).slider( "value" ) );
+	  });
+	  </script>
+	  <style>
+	  		div, span, p{border:0;padding:0;margin:0;}
+	  		body, html {width:760px;}
+	  		#pics img {display:none;width:640px;height:480px;}
+	  		#right {float:right;width:80px;}
+	  		#right p {font-family:arial;font-size:14px;}
+	  		#right p span {width:16px; height:16px; float:left;margin-right:4px;}
+	  		#right p#modra span {background-color:blue;}
+	  		#right p#zluta span {background-color:yellow;}
+	  		#right p#cervena span {background-color:red;}
+	  		#right p#zelena span {background-color:green;}
+	  		#right p#hneda span {background-color:brown;}
+	  </style>
+</head>
+<body>
+	<div id="right">
+		<p id="modra"><span>&nbsp;</span>MODRA</p>
+		<p id="zluta"><span>&nbsp;</span>ZLUTA</p>
+		<p id="cervena"><span>&nbsp;</span>CERVE</p>
+		<p id="zelena"><span>&nbsp;</span>ZELEN</p>
+		<p id="hneda"><span>&nbsp;</span>HNEDA</p>
+	</div>
+	<p id="pics">
+		<img src="pic/1998.jpg" id="pic1998">
+		<img src="pic/1999.jpg" id="pic1999">
+		<img src="pic/2000.jpg" id="pic2000">
+		<img src="pic/2001.jpg" id="pic2001">
+		<img src="pic/2002.jpg" id="pic2002">
+		<img src="pic/2003.jpg" id="pic2003">
+		<img src="pic/2004.jpg" id="pic2004">
+		<img src="pic/2005.jpg" id="pic2005">
+		<img src="pic/2006.jpg" id="pic2006">
+		<img src="pic/2007.jpg" id="pic2007">
+		<img src="pic/2008.jpg" id="pic2008">
+		<img src="pic/2009.jpg" id="pic2009">
+		<img src="pic/2010.jpg" id="pic2010">
+		<img src="pic/2011.jpg" id="pic2011">
+		<img src="pic/2012.jpg" id="pic2012">
+	<p>
+	  <label for="rok">Rok:</label>
+	  <input type="text" id="rok" style="border: 0; color: #f6931f; font-weight: bold;" />
+	</p>
+	 
+	<div id="slider"></div>
+</body>
+</html>
