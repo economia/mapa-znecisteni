@@ -1,6 +1,6 @@
 # Data IHNED.cz
 
-Projekt datablogu portálu iHNed (e.conomia a.s.) datablogu na adrese http://ihned.cz/data.
+[Datablog](http://ihned.cz/data/) portálu [IHNED.cz](http://ihned.cz/) vydavatelství [e.conomia](http://economia.ihned.cz/) 
 
 Mapa znečištění
 --------------
